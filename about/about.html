@@ -4772,7 +4772,7 @@
         /* ------------------- */
 
         .landingHeader {
-            background-size: cover;
+            background-size: 100%;
             position: relative;
             padding: 20px 0 20px 0;
             overflow: hidden;
@@ -4811,8 +4811,8 @@
         }
 
         .landingHeaderBase {
-            background-size: cover;
-            background-color: #00629b;
+            background-size: 100%;
+            background-color: #68bd48;
             position: relative;
             padding: 100px 0 60px 0;
             overflow: hidden;
@@ -8660,29 +8660,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
 
-    <script>
-        var cartCSDLArticleTally = localStorage.getItem('CSDL_ARTICLES_IN_CART');
-        if (typeof cartCSDLArticleTally === 'undefined' || cartCSDLArticleTally === null) {
-            cartCSDLArticleTally = 0;
-            localStorage.setItem('CSDL_ARTICLES_IN_CART', cartCSDLArticleTally);
-        } else {
-            cartCSDLArticleTally = parseInt(cartCSDLArticleTally, 10);
-        }
-
-        var originUrl = localStorage.getItem('originUrl');
-        if (typeof originUrl !== 'undefined' && originUrl !== null) {
-            localStorage.removeItem('originUrl');
-            window.location.href = originUrl;
-        }
-
-        var siteUrl = "https://www.computer.org";
-        var cookieDomain = siteUrl.toLowerCase().replace("https://", "");
-        cookieDomain = cookieDomain.toLowerCase().replace("http://", "");
-        Cookies.remove('CSDL_AUTH_COOKIE', {
-            path: '/',
-            domain: '.' + cookieDomain
-        });
-    </script>
+    
 
     <script src="https://s3-us-west-2.amazonaws.com/ieeeshutpages/gdpr/settings.js"></script>
     
@@ -8735,7 +8713,7 @@
         <!-- Top Nav -->
         <div class="topNavBar topHeaderMenu col-lg-12 col-md-12 hidden-sm hidden-xs" id="topNavBar">
             <div class="topHeaderIEEELogo pull-right hidden-sm hidden-md">
-                <a href="https://www.ieee.org" target="_blank"><img src="/assets/images/logos/IEEE/IEEELogo_100x34.png"></a>
+                <a href="https://www.ieee.org" target="_blank"><img src="assets/images/logos/IEEE/IEEELogo_100x34.png"></a>
             </div>
             <div class="topHeaderSocial3 pull-right">
                 <a href="https://www.linkedin.com/showcase/ieee-pes-iiuc-student-branch-chapter/" target="_blank">
@@ -8764,7 +8742,7 @@
         <!-- Logos Mobile (Computer.org) -->
         <div class="hidden-lg mobileLogoContainer">
             <a href="/"><img src="assets/images/logos/IEEE/IEEE PES Profile pic2.png" width="55" height="55" class=""></a>
-            <a href="https://www.ieee.org"><img src="/assets/images/logos/IEEE/IEEELogo.svg" class="mobileLogos mobileLogoIEEE"></a>
+            <a href="https://www.ieee.org"><img src="assets/images/logos/IEEE/IEEELogo.svg" class="mobileLogos mobileLogoIEEE"></a>
         </div>
 
         <!-- Default Menu-->
@@ -8793,9 +8771,10 @@
 
             <style>
                 .landingHeader {
-                    background: url("/assets/images/PES\ cover\ photo\ linkdin.png");
+                    background: url("assets/images/PES\ cover\ photo\ linkdin.png");
                     background-size: cover;
                     background-repeat: no-repeat;
+                    ;
                    
                 }
                 .landingHeaderHeading h1{
@@ -8815,17 +8794,31 @@
     color: #ffffff;
     margin: 6px 10px 0 0;
 }
-
+               
+                @media screen and (min-width: 769px)  {
+                    .landingHeader {
+                        background: #68bd48 url("assets/images/PES\ cover\ photo\ linkdin.png") no-repeat ;
+                        background-size:cover;
+                        height: 350px;
+                    }
+                }
+                @media screen and (min-width: 768px)  {
+                    .landingHeader {
+                        background: #68bd48 url("assets/images/PES\ cover\ photo\ linkdin.png") no-repeat 50% ;
+                        background-size:cover;
+                        height: 250px;
+                    }
+                }
                 @media screen and (min-width: 481px) and (max-width: 768px) {
                     .landingHeader {
-                        background: #68bd48 url("/assets/images/PES\ cover\ photo\ linkdin.png") no-repeat 30% top;
-                        background-size: cover;
+                        background: #68bd48 url("assets/images/PES\ cover\ photo\ linkdin.png") no-repeat 50% ;
+                        background-size:cover;
                     }
                 }
 
                 @media screen and (max-width: 480px) {
                     .landingHeader {
-                        background: #68bd48 url("/assets/images/PES\ cover\ photo\ linkdin.png") no-repeat 30% top;
+                        background: #68bd48 url("assets/images/PES\ cover\ photo\ linkdin.png" )no-repeat 50%;
                         background-size: cover;
                     }
                 }
@@ -8841,15 +8834,10 @@
                     <div class="col-lg-7 col-md-7 col-sm-8 col-xs-10 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
 
                         <div class="landingHeaderHeading">
-                            <h1>THE IEEE IIUC Pes Society</h1>
+                            <h1></h1>
                         </div>
-                        <div class="landingHeaderHeadingBar">
-                            &nbsp;
-                        </div>
-                       
-                        <div class="landingHeaderSummary">
-                            
-                        </div>
+                     
+                        
 
                     </div>
                     <div class="col-lg-6 col-md-4 col-sm-3">
@@ -8880,8 +8868,8 @@
                 <h2>About</h2>
                 <p>The IIUC Student Branch Chapter for the IEEE Power and Energy Society is one of the three subunits of IEEE IIUC that were approved on 18 February 2021. Student Branch
 
-                    One of the objectives is to contribute to the field of power and energy through technological advancements and innovation. We offer a variety of networking opportunities to our Society members. Access to a large number of live and archived technical and professional development courses, as well as access to a large number of live and archived technical and professional development courses. <br class="empty" />Meet our leadership. <a href=""><img loading="lazy" class="img-responsive alignnone wp-image-161628 size-full" src="" alt=""  /></a></p>
-                <p><a href="">Executive Staff</a></p>
+                    One of the objectives is to contribute to the field of power and energy through technological advancements and innovation. We offer a variety of networking opportunities to our Society members. Access to a large number of live and archived technical and professional development courses, as well as access to a large number of live and archived technical and professional development courses. <br class="empty" /> <a href=""><img loading="lazy" class="img-responsive alignnone wp-image-161628 size-full" src="" alt=""  /></a></p>
+                
             </div>
             <p>&nbsp;</p>
 
@@ -8890,6 +8878,7 @@
 
 
             <style>
+ 
                 .relatedContentImage1 {
                     background-color: #ffffff;
                 }
@@ -8901,7 +8890,7 @@
             </style>
             <div class="row relatedContentContainer1">
                 <div class="relatedContentImage1 col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                    <img src="/assets/images/IEEE Pes day banner.png" class="img-responsive relatedContentImage" />
+                    <img src="assets/images/IEEE Pes day banner.png" class="img-responsive relatedContentImage" />
                 </div>
                 <div class="relatedContentRight col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <div class="col-lg-10 col-md-12 col-sm-12 col-xs-12">
